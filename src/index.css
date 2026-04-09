@@ -1,8 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 @import "tailwindcss";
+
+@font-face {
+    font-family: "DMSerif-Italic";
+    src: url("/Fonts/DMSerifDisplay-Italic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "DMSerif-Regular";
+    src: url("/Fonts/DMSerifDisplay-Regular.ttf") format("truetype");
+}
+
+@theme {
+    --font-serif: "DMSerif-Italic", serif;
+    --font-DMSerif: "DMSerif-Regular", serif;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
 
 @layer base{
   main{
-    @apply bg-black h-dvh w-dvw text-amber-50;
+    @apply bg-black text-amber-50;
 
+    #Navbar{
+      @apply relative w-full;
+      nav{
+        @apply fixed top-6 w-full px-4.5 z-40 h-12 flex items-center justify-between bg-yellow-800;
+
+        .links{
+          @apply flex gap-3.5;
+        }
+      }
+    }
+
+    #Hero{
+      @apply relative h-screen w-screen flex flex-col justify-center;
+
+      .hero-container{
+        @apply flex flex-col z-30;
+
+        .title{
+          @apply md:text-8xl text-5xl text-center font-DMSerif font-bold space-x-1.5;
+        }
+
+        .sub-titles{
+          @apply flex justify-between w-[80%] mt-52 mx-auto;
+
+          h2{
+            @apply text-amber-200 text-3xl font-bold font-DMSerif;
+          }
+          a{
+            @apply text-sm underline hover:text-amber-200;
+          }
+        }
+      }
+      video{
+        @apply bg-[#00000045] absolute w-full h-full md:object-cover object-bottom object-center left-0 bottom-0;
+      }
+    }
+    #SubHero{
+      @apply relative mt-48 h-dvh w-dvw z-30;
+
+      .subhero-container{
+        @apply flex md:flex-row flex-col justify-between items-center w-[80%] mx-auto;
+      }
+    }
   }
 }
