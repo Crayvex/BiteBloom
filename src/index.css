@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@layer base{
+  main{
+    @apply bg-black h-dvh w-dvw text-amber-50;
+
+  }
+}
