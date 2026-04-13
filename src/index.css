@@ -19,6 +19,9 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+body,html{
+  scroll-behavior: smooth;
+}
 
 body::-webkit-scrollbar{
   display: none;
@@ -31,7 +34,7 @@ body::-webkit-scrollbar{
     #Navbar{
       @apply relative w-full;
       nav{
-        @apply fixed top-6 w-full px-4.5 z-40 h-12 flex items-center justify-between bg-yellow-800;
+        @apply fixed top-6 w-full px-4.5 z-40 h-12 flex md:flex-row flex-col items-center justify-between bg-yellow-800;
 
         .links{
           @apply flex gap-3.5;
@@ -50,7 +53,7 @@ body::-webkit-scrollbar{
         }
 
         .sub-titles{
-          @apply flex justify-between w-[80%] mt-52 mx-auto;
+          @apply flex justify-between md:flex-row flex-col px-16 w-[80%] mt-52 mx-auto;
 
           h2{
             @apply text-amber-200 text-3xl font-bold font-DMSerif;
@@ -61,7 +64,7 @@ body::-webkit-scrollbar{
         }
       }
       video{
-        @apply bg-[#00000045] absolute w-full h-full md:object-cover object-bottom object-center left-0 bottom-0;
+        @apply bg-[#00000045] absolute w-full h-full md:object-cover md:object-top object-bottom object-center object-fill left-0 bottom-0;
       }
     }
     #SubHero{
@@ -69,6 +72,33 @@ body::-webkit-scrollbar{
 
       .subhero-container{
         @apply flex md:flex-row flex-col justify-between items-center w-[80%] mx-auto;
+      }
+    }
+    #About{
+      @apply w-screen pt-46;
+      .about-container{
+        @apply flex flex-col;
+
+        .title1{
+          @apply flex md:justify-around md:flex-row flex-col w-[90%] mx-auto;
+
+          .heading{
+            @apply text-3xl w-full font-bold font-DMSerif mb-2.5;
+          }
+        }
+        .title2{
+          @apply md:w-1/4 w-1/2;
+        }
+
+        img{
+          @apply h-56 w-full rounded-2xl cursor-pointer hover:bg-[#00000084] hover:p-0.5 transition-all delay-150 bg-contain;
+        }
+        h2{
+          @apply text-sm;
+          span{
+            @apply text-4xl font-bold;
+          }
+        }
       }
     }
   }

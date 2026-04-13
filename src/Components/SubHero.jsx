@@ -10,15 +10,18 @@ const SubHero = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: 'subhero-container',
-        start: 'top 60%',
-        end: 'bottom 20%',
+        start: 'top 30%',
+        end: 'bottom 70%',
         scrub: true
       }
     })
-    tl.from('.card', {
+    tl.fromTo('.subhero-container', {
       opacity: 0,
       y: 100,
-      duration: 1
+      duration: 0.6
+    }, {
+      opacity: 1,
+      y: 0
     })
   })
 
