@@ -1,16 +1,35 @@
-# React + Vite
+# 🌸 BiteBloom
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Where Flavors Bloom** — A modern, vibrant food website showcasing delicious starters, mains, desserts, and refreshing beverages.
 
-Currently, two official plugins are available:
+BiteBloom is a beautifully designed food platform built to celebrate fresh ingredients, bold flavors, and joyful eating. Whether you're browsing mouth-watering recipes, exploring the menu, or planning your next meal, BiteBloom makes every bite feel special.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![BiteBloom Hero](https://via.placeholder.com/1200x600/4ade80/166534?text=BiteBloom+Hero+Banner)
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Elegant Menu System** with categories (Starters, Mains, Desserts, Beverages)
+- **Popular & Vegetarian Filters**
+- **Responsive Design** – Looks stunning on mobile, tablet, and desktop
+- **Fast Performance** using modern React architecture
+- **Rich Data Structure** with images, prices, and prep time
+- **Ready for Expansion** – Easy to add cart, ordering, blog, or user features
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Framework**: React
+- **Styling**: Tailwind CSS
+- **Language**: JavaScript
+- **Data**: Static constants (easily convertible to API or CMS)
+- **Assets**: High-quality food photography & videos
+
+## 🍽️ Menu Data
+
+The menu is managed in `constants/menu.js`. It includes:
+
+- **Starters** – Bruschetta, Calamari, Avocado Salad
+- **Main Course** – Grilled Salmon, Butter Chicken, Mushroom Risotto, Beef Steak
+- **Desserts** – Chocolate Lava Cake, Mango Cheesecake, Tiramisu
+- **Beverages** – Mint Lemonade, Berry Smoothie, Iced Chai Latte
+
+Each item contains: name, description, price, image path, popularity flag, vegetarian tag, and prep time.
